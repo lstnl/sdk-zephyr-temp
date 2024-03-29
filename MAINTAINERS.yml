@@ -3632,6 +3632,7 @@ TI K3 Platforms:
     - vaishnavachath
   collaborators:
     - gramsay0
+    - dnltz
   files:
     - boards/phytec/*am62*/
     - boards/ti/*am62*/
