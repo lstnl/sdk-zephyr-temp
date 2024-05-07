@@ -3822,7 +3822,7 @@ TF-M Integration:
   maintainers:
     - d3zd3z
   collaborators:
-    - SebastianBoe
+    - Vge0rge
     - ithinuel
   files:
     - samples/tfm_integration/
@@ -4680,7 +4680,7 @@ West:
   maintainers:
     - d3zd3z
   collaborators:
-    - SebastianBoe
+    - Vge0rge
     - ithinuel
   files:
     - modules/trusted-firmware-m/
@@ -4692,7 +4692,7 @@ West:
   maintainers:
     - d3zd3z
   collaborators:
-    - SebastianBoe
+    - Vge0rge
     - ithinuel
   files: []
   labels:
@@ -4716,7 +4716,7 @@ West:
   maintainers:
     - d3zd3z
   collaborators:
-    - SebastianBoe
+    - Vge0rge
     - ithinuel
   files: []
   labels:
