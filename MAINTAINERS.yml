@@ -3149,7 +3149,6 @@ Synopsys Platforms:
   collaborators:
     - abrodkin
     - evgeniy-paltsev
-    - IRISZZW
   files:
     - soc/snps/
     - boards/snps/
