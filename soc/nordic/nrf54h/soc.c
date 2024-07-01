@@ -55,8 +55,6 @@ static void power_domain_init(void)
 
 static int trim_hsfll(void)
 {
-#if defined(HSFLL_NODE)
-
 	NRF_HSFLL_Type *hsfll = (NRF_HSFLL_Type *)DT_REG_ADDR(HSFLL_NODE);
 	nrf_hsfll_trim_t trim = {
 		.vsup = sys_read32(FICR_ADDR_GET(HSFLL_NODE, vsup)),
@@ -79,15 +77,14 @@ static int trim_hsfll(void)
 	LOG_DBG("NRF_HSFLL->TRIM.COARSE = %d", hsfll->TRIM.COARSE);
 	LOG_DBG("NRF_HSFLL->TRIM.FINE = %d", hsfll->TRIM.FINE);
 
-#endif /* defined(HSFLL_NODE) */
-
 	return 0;
 }
 
 static int nordicsemi_nrf54h_init(void)
 {
+#if defined(CONFIG_NRF_ENABLE_ICACHE)
 	sys_cache_instr_enable();
-	sys_cache_data_enable();
+#endif
 
 	power_domain_init();
 
@@ -111,4 +108,4 @@ void arch_busy_wait(uint32_t time_us)
 	nrfx_coredep_delay_us(time_us);
 }
 
-SYS_INIT(nordicsemi_nrf54h_init, PRE_KERNEL_1, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+SYS_INIT(nordicsemi_nrf54h_init, PRE_KERNEL_1, 0);

@@ -6,5 +6,3 @@ board:
     variants:
     - name: xip
       cpucluster: cpuppr
-    - name: xip
-      cpucluster: cpusys
